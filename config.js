@@ -14,7 +14,6 @@ global.owner = [
 ['573001533523', '🐔 Creador Batman', true],
 ['15614809253', 'David RyZe', true],
 ['573133374132', 'Yᴏ Sᴏʏ Yᴏ', true],
-['18493907272', 'Dani Pana Del Brayan', true],
 ];
 
 //✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
