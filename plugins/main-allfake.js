@@ -115,10 +115,6 @@ let pp = null; try { pp = await conn.profilePictureUrl('50231458537@s.whatsapp.n
 global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1 }
 }}, { quoted: m }
 
-
-
-
-
 global.icono = [ 
 'https://files.cloudkuimages.guru/images/z4rwLoXF.jpg',
 'https://files.cloudkuimages.guru/images/z4rwLoXF.jpg',
@@ -128,8 +124,6 @@ global.icono = [
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { /*newsletterJid: channelRD.id,*/ serverMessageId: 100, /*newsletterName: channelRD.name,*/ }, externalAdReply: { showAdAttribution: true, title: textbot, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
-
-
 
 export default handler
 
