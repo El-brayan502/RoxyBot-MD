@@ -619,10 +619,6 @@ if (plugin.group && !m.isGroup) {
 fail('group', m, this)
 continue
 }
-if (plugin.register == true && _user.registered == false) { 
-fail('unreg', m, this)
-continue
-}
 m.isCommand = true
 let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 
 if (xp > 200)
