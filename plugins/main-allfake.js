@@ -119,7 +119,7 @@ global.icono = [
 'https://files.cloudkuimages.guru/images/UJ4byDZm.jpg'
 ].getRandom()
 
-global.rcanal = { contextInfo: { externalAdReply: { title: botname, mediaType: 2, previewType: "VIDEO", thumbnail: catalogo, mediaUrl: 'https://youtu.be/FKVuVneuwtg', sourceUrl: gp1 }}} 
+global.rcanal2 = { contextInfo: { externalAdReply: { title: botname, mediaType: 2, previewType: "VIDEO", thumbnail: catalogo, mediaUrl: 'https://youtu.be/FKVuVneuwtg', sourceUrl: gp1 }}} 
 
 export default handler
 
