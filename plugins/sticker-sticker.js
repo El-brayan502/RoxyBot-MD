@@ -47,7 +47,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (stiker) {
       conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
     } else {
-      return conn.reply(m.chat, '\`🍒 ʜᴏʟᴀ ᴘᴏʀ ғᴀᴠᴏʀ ᴇɴᴠɪ́ᴀ ᴜɴ ᴠɪ́ᴅᴇᴏ ᴏ ᴜɴᴀ ɪᴍᴀɢᴇɴ ǫᴜᴇ ǫᴜɪᴇʀᴀs ᴛʀᴀɴsғᴏʀᴍᴀʀ ᴇɴ sᴛɪᴄᴋᴇʀ ʏ ᴠᴜᴇʟᴠᴀ ᴀ ʀᴇᴇɴᴠɪᴀʀ ᴇʟ ᴄᴏᴍᴀɴᴅᴏ  ₍ᐢ..ᐢ₎♡\`', m, fake)
+      return conn.reply(m.chat, '\`🍒 ʜᴏʟᴀ ᴘᴏʀ ғᴀᴠᴏʀ ᴇɴᴠɪ́ᴀ ᴜɴ ᴠɪ́ᴅᴇᴏ ᴏ ᴜɴᴀ ɪᴍᴀɢᴇɴ ǫᴜᴇ ǫᴜɪᴇʀᴀs ᴛʀᴀɴsғᴏʀᴍᴀʀ ᴇɴ sᴛɪᴄᴋᴇʀ ʏ ᴠᴜᴇʟᴠᴀ ᴀ ʀᴇᴇɴᴠɪᴀʀ ᴇʟ ᴄᴏᴍᴀɴᴅᴏ  ₍ᐢ..ᐢ₎♡\`', m, rcanal)
     }
   }
 }
