@@ -42,7 +42,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 
 
     const channelRD = { 
-      id: '120363312092804854@newsletter', 
+      id: '120363417186717632@newsletter', 
       name: '𝖱𝗈𝗑𝗒 𝖡𝗈𝗍 𝖠𝖨 : 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖮𝖿𝗂𝖼𝗂𝖺𝗅'
     }
 
