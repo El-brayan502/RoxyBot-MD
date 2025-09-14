@@ -119,7 +119,7 @@ global.icono = [
 'https://files.cloudkuimages.guru/images/UJ4byDZm.jpg'
 ].getRandom()
 
-global.rcanal2 = { contextInfo: { externalAdReply: { title: botname, mediaType: 2, previewType: "VIDEO", thumbnail: catalogo, mediaUrl: 'https://youtu.be/FKVuVneuwtg', sourceUrl: gp1 }}} 
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { /*newsletterJid: channelRD.id,*/ serverMessageId: 100, /*newsletterName: channelRD.name,*/ }, externalAdReply: { showAdAttribution: true, title: textbot, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
 
