@@ -6,7 +6,7 @@ import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
   try {
-    await m.react('✨️')
+    await m.react('🍓')
 
     let { exp, bank, registered } = global.db.data.users[m.sender]
     let name = await conn.getName(m.sender)
@@ -18,7 +18,6 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
     let perfil = await conn.profilePictureUrl(conn.user.jid, 'image')
       .catch(() => 'https://files.catbox.moe/9i5o9z.jpg')
 
-    // Preparar el tag del usuario
     const userId = m.sender.split('@')[0]
     let taguser = `@${userId}`
     let phone = PhoneNumber('+' + userId)
@@ -43,8 +42,8 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 
 
     const channelRD = { 
-      id: '120363417186717632@newsletter', 
-      name: 'Oficial channel Roxy-MD'
+      id: '120363312092804854@newsletter', 
+      name: '𝖱𝗈𝗑𝗒 𝖡𝗈𝗍 𝖠𝖨 : 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖮𝖿𝗂𝖼𝗂𝖺𝗅'
     }
 
 
@@ -59,175 +58,174 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
           newsletterName: channelRD.name
         },
         externalAdReply: {
-          title: '🌸 𝗥𝗢𝗫𝗬 𝗠𝗗 𝗕𝗢𝗧 🌸',
-          body: '© 𝑃𝑜𝑤𝑒𝑟𝑒𝑑 𝐵𝑦 𝐷𝑒𝑣𝐵𝑟𝑎𝑦𝑎𝑛',
+          title: '໒֟፝🍉 ֪𝖱𝗈𝗑𝗒-𝖠𝖨',
+          body: '𝖱𝗈𝗑𝗒-𝖠𝗂 : 𝖡𝗋𝖺𝗒𝖺𝗇 𝖴𝗐𝗎 📌',
           mediaUrl: null,
           description: null,
           previewType: "PHOTO",
           thumbnailUrl: 'https://files.catbox.moe/9i5o9z.jpg',
-          sourceUrl: 'https://github.com/El-brayan502/RoxyBot-MD/',
           mediaType: 1,
           renderLargerThumbnail: true
         }
       }
     }
 
-let saludo
-let hora = new Date().getUTCHours() - 6 
-
-if (hora < 0) hora += 24 // por si queda en negativo
-
-if (hora >= 5 && hora < 13) {
-  saludo = '✨️ Hola senpai, que tengas un lindo día ❤️'
-} else if (hora >= 13 && hora < 18) {
-  saludo = '✨️ Buenas tardes, senpai que se te ofrece 💖'
-} else {
-  saludo = '🍭 ¿Por qué aún no duermes, onii-chan? 🥱'
-}
-
     const body = `
-🎀 Bienvenido a Roxy AI
-${saludo}, *${taguser}*!
+*ര ׄ 🌟 ׅ Bienvenido a, Roxy MD*
 ────────────────
-✨ I N F O R M A C I Ó N ✨
-· › 🌺 Nombre del Bot: RoxyBot-MD 
-· › 👤 Nombre de Usuario: *${taguser}*
-· › 🍡 Estado: Gratis
-· › 🍒 *Tiempo en línea* :: *${uptime}*
+*✨ I N F O R M A C I Ó N ✨*
+
+*\`· ›  Nombre del Bot\`* :: RoxyBot-MD 
+*\`· ›  Nombre de Usuario\`* :: ${taguser}
+*\`· ›  Estado: Gratis\`* :: Gratis
+*\`· ›  Tiempo en línea\`*  :: ${uptime}
 ────────────────
 
-*【𝕷 𝖎 𝖘 𝖙 𝖆 - 𝕯𝖊 - 𝕮 𝖔 𝖒 𝖆 𝖓 𝖉 𝖔 𝖘】*
+*\`sі ᥱᥒᥴᥙ𝗍rᥲs ᥙᥒ ᥱrr᥆r ᥴ᥆ᥒ𝗍ᥲᥴ𝗍ᥲ ᥴ᥆ᥒ ᥱᥣ ᥆ᥕᥒᥱr\`*
+*\`sі 𝗊ᥙіᥱrᥱs ᥴrᥱᥲr ᥙᥒ sᥙᑲᑲ᥆𝗍 ᥙSᥲ\`*
+_#code_
 
-◈───≼ _*MAIN & RPG*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ʀᴇɢ <ɴᴏᴍʙʀᴇ ᴇᴅᴀᴅ>
-┝⎆ [  ${usedPrefix}ᴜɴʀᴇɢ
-┝⎆ [  ${usedPrefix}ᴍᴇɴᴜ
-┝⎆ [  ${usedPrefix}ᴊᴜᴇɢᴏs
-┝⎆ [  ${usedPrefix}ᴘɪɴɢ
-┝⎆ [  ${usedPrefix}ɢʀᴜᴘᴏs
-┝⎆ [  ${usedPrefix}ᴏᴡɴᴇʀ
-◈┄──━━┉─࿂
-◈───≼ _*NSFW*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ᴘᴀᴄᴋ
-┝⎆ [  ${usedPrefix}ᴘᴇɴᴇᴛʀᴀʀ
-┝⎆ [  ${usedPrefix}sᴇxᴏ
-┝⎆ [  ${usedPrefix}ᴠɪᴏʟᴀʀ
-┝⎆ [  ${usedPrefix}ғᴏʟʟᴀʀ
-◈┄──━━┉─࿂
-◈───≼ _*FUN*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ᴛᴏᴘ <text>
-┝⎆ [  ${usedPrefix}ɢᴀʏ
-┝⎆ [  ${usedPrefix}ᴘᴀᴊᴇᴀᴍᴇ
-┝⎆ [  ${usedPrefix}ᴅᴏxᴇᴏ @usuario
-┝⎆ [  ${usedPrefix}ᴅᴏxᴜᴇʀ @usuario
-┝⎆ [  ${usedPrefix}ғᴏʀᴍᴀʀᴘᴀʀᴇᴊᴀ
-┝⎆ [  ${usedPrefix}ғᴏʀᴍᴀʀᴘᴀʀᴇᴊᴀ𝟻
-┝⎆ [  ${usedPrefix}ʜᴜᴇᴠᴏ
-◈┄──━━┉─࿂
+𓂂𓏸  𐅹੭੭   *\`Mᥲіᥒ\`* ☁️ ᦡᦡ
 
-◈───≼ _*ANIME*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ᴋɪss
-┝⎆ [  ${usedPrefix}ᴀɴɢʀʏ
-┝⎆ [  ${usedPrefix}ʙɪᴛᴇ
-┝⎆ [  ${usedPrefix}ʙᴜᴇɴᴀsɴᴏᴄʜᴇs
-┝⎆ [  ${usedPrefix}ʙᴜᴇɴᴏsᴅɪ́ᴀs
-┝⎆ [  ${usedPrefix}ᴄᴀғᴇ
-┝⎆ [  ${usedPrefix}ᴄʀʏ
-┝⎆ [  ${usedPrefix}ᴄᴜᴅᴅʟᴇ
-┝⎆ [  ${usedPrefix}ʜᴀᴘᴘʏ
-┝⎆ [  ${usedPrefix}ʜᴇʟʟᴏ
-┝⎆ [  ${usedPrefix}ʟᴏʟɪ
-┝⎆ [  ${usedPrefix}ʀᴡ
-┝⎆ [  ${usedPrefix}ᴡ
-┝⎆ [  ${usedPrefix}ʀᴇᴄʟᴀᴍᴀᴡᴀɪғᴜ
-┗━━━━━━━━━━━━━━━━━⪩
+ര ׄ ☁️ ׅ ${usedPrefix}ʀᴇɢ <ɴᴏᴍʙʀᴇ ᴇᴅᴀᴅ>
+ര ׄ ☁️ ׅ ${usedPrefix}ᴜɴʀᴇɢ
+ര ׄ ☁️ ׅ ${usedPrefix}ᴍᴇɴᴜ
+ര ׄ ☁️ ׅ ${usedPrefix}ᴊᴜᴇɢᴏs
+ര ׄ ☁️ ׅ ${usedPrefix}ᴘɪɴɢ
+ര ׄ ☁️ ׅ ${usedPrefix}ɢʀᴜᴘᴏs
+ര ׄ ☁️ ׅ ${usedPrefix}ᴏᴡɴᴇʀ
 
 
-◈───≼ _*DESCARGAS*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ᴛɪᴋᴛᴏᴋ
-┝⎆ [  ${usedPrefix}ᴘʟᴀʏ
-┝⎆ [  ${usedPrefix}ᴘɪɴᴅʟ <link>
-┝⎆ [  ${usedPrefix}ɪɴsᴛᴀɢʀᴀᴍ <link>
-┝⎆ [  ${usedPrefix}ꜰᴀᴄᴇʙᴏᴏᴋ <link>
-◈┄──━━┉─࿂
+𓂂𓏸  𐅹੭੭   *\`𝖭𝗌ẜɯ\`* 🪼 ᦡᦡ
 
-◈───≼ _*BUSCADORES*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ʏᴛs
-┝⎆ [  ${usedPrefix}ᴘɪɴᴛᴇʀᴇsᴛ
-┝⎆ [  ${usedPrefix}ᴀᴘᴛᴏɪᴅᴇ<texto>
-┝⎆ [  ${usedPrefix}ᴛɪᴋᴛᴏᴋsᴇᴀʀᴄʜ
-┝⎆ [  ${usedPrefix}sꜱᴡᴇʙ
-┝⎆ [  ${usedPrefix}sᴘᴏᴛɪꜰʏ
-◈┄──━━┉─࿂
-◈───≼ _*GRUPO*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ᴛᴀɢᴛᴇxᴛ
-┝⎆ [  ${usedPrefix}ᴀᴅᴠᴇʀᴛᴇɴᴄɪᴀ <@tag> <text>
-┝⎆ [  ${usedPrefix}ᴘᴇʀғɪʟ
-┝⎆ [  ${usedPrefix}ɢʀᴜᴘᴏᴄᴇʀʀᴀʀ
-┝⎆ [  ${usedPrefix}ɢʀᴜᴘᴏᴀʙʀɪʀ
-┝⎆ [  ${usedPrefix}ɪɴᴠᴏᴄᴀʀ 
-┝⎆ [  ${usedPrefix}sᴇᴛᴘᴘɢʀᴜᴘᴏ 
-┝⎆ [  ${usedPrefix}ᴋɪᴄᴋ <@tag>
-┝⎆ [  ${usedPrefix}ᴛᴀɢ
-┝⎆ [  ${usedPrefix}ᴅᴇʟ
-◈┄──━━┉─࿂
+ര ׄ 🪼 ׅ ${usedPrefix}ᴘᴀᴄᴋ
+ര ׄ 🪼 ׅ ${usedPrefix}ᴘᴇɴᴇᴛʀᴀʀ
+ര ׄ 🪼 ׅ ${usedPrefix}sᴇxᴏ
+ര ׄ 🪼 ׅ ${usedPrefix}ᴠɪᴏʟᴀʀ
+ര ׄ 🪼 ׅ ${usedPrefix}ғᴏʟʟᴀʀ
 
-◈───≼ _*IA & ARTE*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ᴍᴀɢɪᴄsᴛᴜᴅɪᴏ <texto>
-┝⎆ [  ${usedPrefix}ᴀɪ <texto>
-┝⎆ [  ${usedPrefix}ᴡᴘᴡ
-┝⎆ [  ${usedPrefix}ᴘᴏʟʟɪɴᴀᴛɪᴏɴs <texto>
-┝⎆ [  ${usedPrefix}ɢᴇᴍɪɴɪ
-┝⎆ [  ${usedPrefix}ʙɢʀᴇᴍᴏᴠᴇʀ <imagen>
-◈┄──━━┉─࿂
 
-◈───≼ _*INTERNET*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ɴɪᴍᴇɢᴀᴍᴇsᴇᴀʀᴄʜ
-┝⎆ [  ${usedPrefix}ᴍᴇɪᴏ
-◈┄──━━┉─࿂
+𓂂𓏸  𐅹੭੭   *\`𝖥𝗎𝗇\`* 🌳 ᦡᦡ
 
-◈───≼ _*JADIBOT*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ʙᴏᴛs
-┝⎆ [  ${usedPrefix}ᴄᴏᴅᴇ
-◈┄──━━┉─࿂
+ര ׄ 🌳 ׅ ${usedPrefix}ᴛᴏᴘ <text>
+ര ׄ 🌳 ׅ ${usedPrefix}ɢᴀʏ
+ര ׄ 🌳 ׅ ${usedPrefix}ᴘᴀᴊᴇᴀᴍᴇ
+ര ׄ 🌳 ׅ ${usedPrefix}ᴅᴏxᴇᴏ @usuario
+ര ׄ 🌳 ׅ ${usedPrefix}ᴅᴏxᴜᴇʀ @usuario
+ര ׄ 🌳 ׅ ${usedPrefix}ғᴏʀᴍᴀʀᴘᴀʀᴇᴊᴀ
+ര ׄ 🌳 ׅ ${usedPrefix}ғᴏʀᴍᴀʀᴘᴀʀᴇᴊᴀ𝟻
+ര ׄ 🌳 ׅ ${usedPrefix}ʜᴜᴇᴠᴏ
 
-◈───≼ _*OWNER*_ ≽──⊚
-┝⎆ [  ${usedPrefix}ʀᴇɪɴɪᴄɪᴀʀ
-┝⎆ [  ${usedPrefix}ᴅsᴏᴡɴᴇʀ
-┝⎆ [  ${usedPrefix}sᴇᴛɴᴀᴍᴇ
-┝⎆ [  ${usedPrefix}sᴇᴛᴘᴘ <img>
-┝⎆ [  ${usedPrefix}ʀᴇsᴛᴀʀᴛ
-┝⎆ [  ${usedPrefix}ᴜᴘᴅᴀᴛᴇ
-◈┄──━━┉─࿂
 
-◈───≼ _*STICKER*_ ≽──⊚
-┝⎆ [  ${usedPrefix}sᴛɪᴄᴋᴇʀ <img>
-┝⎆ [  ${usedPrefix}ʙʀᴀᴛ *<texto>*
-◈┄──━━┉─࿂
+𓂂𓏸  𐅹੭੭   *\`𝖠𝗇ı𝗆ᧉ\`* 🥞 ᦡᦡ
 
-◈───≼ _*TOOLS*_ ≽──⊚
-┝⎆ [  ${usedPrefix}sᴛɪᴄᴋᴇʀsᴇᴀʀᴄʜ <text>
-┝⎆ [  ${usedPrefix}ʀᴠᴏᴄᴀʟ <audio>
-┝⎆ [  ${usedPrefix}ᴛᴏᴜʀʟ2
-┝⎆ [  ${usedPrefix}ʜᴅ
-┝⎆ [  ${usedPrefix}ᴛᴏᴜʀʟ <imagen>
-◈┄──━━┉─࿂
+ര ׄ 🥞 ׅ ${usedPrefix}ᴋɪss
+ര ׄ 🥞 ׅ ${usedPrefix}ᴀɴɢʀʏ
+ര ׄ 🥞 ׅ ${usedPrefix}ʙɪᴛᴇ
+ര ׄ 🥞 ׅ ${usedPrefix}ɴᴏᴄʜᴇs
+ര ׄ 🥞 ׅ ${usedPrefix}ᴅɪ́ᴀs
+ര ׄ 🥞 ׅ ${usedPrefix}ᴄᴀғᴇ
+ര ׄ 🥞 ׅ ${usedPrefix}ᴄʀʏ
+ര ׄ 🥞 ׅ ${usedPrefix}ᴄᴜᴅᴅʟᴇ
+ര ׄ 🥞 ׅ ${usedPrefix}ʜᴀᴘᴘʏ
+ര ׄ 🥞 ׅ ${usedPrefix}ʜᴇʟʟᴏ
+ര ׄ 🥞 ׅ ${usedPrefix}ʟᴏʟɪ
+ര ׄ 🥞 ׅ ${usedPrefix}ʀᴡ
+ര ׄ 🥞 ׅ ${usedPrefix}ᴡ
+ര ׄ 🥞 ׅ ${usedPrefix}ʀᴇᴄʟᴀᴍᴀᴡᴀɪғᴜ
+
+
+𓂂𓏸  𐅹੭੭   *\`𝖣ᨣ𝗐𝗇𝗅ᨣ𝖺𝖽ᧉꭇ𝗌\`* 🍄 ᦡᦡ
+
+ര ׄ 🍄 ׅ ${usedPrefix}ᴛɪᴋᴛᴏᴋ
+ര ׄ 🍄 ׅ ${usedPrefix}ᴘʟᴀʏ
+ര ׄ 🍄 ׅ ${usedPrefix}ᴘɪɴᴅʟ <link>
+ര ׄ 🍄 ׅ ${usedPrefix}ɪɴsᴛᴀɢʀᴀᴍ <link>
+ര ׄ 🍄 ׅ ${usedPrefix}ꜰᴀᴄᴇʙᴏᴏᴋ <link>
+
+
+𓂂𓏸  𐅹੭੭   *\`𝖲ᧉ𝖺ꭇ𝖼𝗁\`* 🧃 ᦡᦡ
+
+ര ׄ 🧃 ׅ ${usedPrefix}ʏᴛs
+ര ׄ 🧃 ׅ ${usedPrefix}ᴘɪɴᴛᴇʀᴇsᴛ
+ര ׄ 🧃 ׅ ${usedPrefix}ᴀᴘᴛᴏɪᴅᴇ<texto>
+ര ׄ 🧃 ׅ ${usedPrefix}ᴛɪᴋᴛᴏᴋsᴇᴀʀᴄʜ
+ര ׄ 🧃 ׅ ${usedPrefix}sꜱᴡᴇʙ
+ര ׄ 🧃 ׅ ${usedPrefix}sᴘᴏᴛɪꜰʏ
+
+
+𓂂𓏸  𐅹੭੭   *\`𝗀ꭇ𝗎𝗉ᨣ𝗌\`* 🍯 ᦡᦡ
+
+ര ׄ 🍯 ׅ ${usedPrefix}ᴛᴀɢᴛᴇxᴛ
+ര ׄ 🍯 ׅ ${usedPrefix}ᴀᴅᴠᴇʀᴛᴇɴᴄɪᴀ <@tag> <text>
+ര ׄ 🍯 ׅ ${usedPrefix}ᴘᴇʀғɪʟ
+ര ׄ 🍯 ׅ ${usedPrefix}ɢʀᴜᴘᴏᴄᴇʀʀᴀʀ
+ര ׄ 🍯 ׅ ${usedPrefix}ɢʀᴜᴘᴏᴀʙʀɪʀ
+ര ׄ 🍯 ׅ ${usedPrefix}ɪɴᴠᴏᴄᴀʀ 
+ര ׄ 🍯 ׅ ${usedPrefix}sᴇᴛᴘᴘɢʀᴜᴘᴏ 
+ര ׄ 🍯 ׅ ${usedPrefix}ᴋɪᴄᴋ <@tag>
+ര ׄ 🍯 ׅ ${usedPrefix}ᴛᴀɢ
+ര ׄ 🍯 ׅ ${usedPrefix}ᴅᴇʟ
+
+
+𓂂𓏸  𐅹੭੭   *\`𝖨𝗇ƚᧉ𝖨ı𝗀ᧉ𝗇𝖼ı𝖺𝗌\`* 🧋 ᦡᦡ
+
+ര ׄ 🧋 ׅ ${usedPrefix}ᴍᴀɢɪᴄsᴛᴜᴅɪᴏ <texto>
+ര ׄ 🧋 ׅ ${usedPrefix}ᴀɪ <texto>
+ര ׄ 🧋 ׅ ${usedPrefix}ᴡᴘᴡ
+ര ׄ 🧋 ׅ ${usedPrefix}ᴘᴏʟʟɪɴᴀᴛɪᴏɴs <texto>
+ര ׄ 🧋 ׅ ${usedPrefix}ɢᴇᴍɪɴɪ
+ര ׄ 🧋 ׅ ${usedPrefix}ʙɢʀᴇᴍᴏᴠᴇʀ <imagen>
+
+
+𓂂𓏸  𐅹੭੭   *\`𝖨𝗇ƚᧉꭇ𝗇ᧉƚ\`* 🍟 ᦡᦡ
+
+ര ׄ 🍟 ׅ ${usedPrefix}ɴɪᴍᴇɢᴀᴍᴇsᴇᴀʀᴄʜ
+ര ׄ 🍟 ׅ ${usedPrefix}ᴍᴇɪᴏ
+    
+    
+𓂂𓏸  𐅹੭੭   *\`𝖩𝖺𝖽ı-ᗷᨣƚ𝗌\`* 🍰 ᦡᦡ
+
+ര ׄ 🍰 ׅ ${usedPrefix}ʙᴏᴛs
+ര ׄ 🍰 ׅ ${usedPrefix}ᴄᴏᴅᴇ
+
+
+𓂂𓏸  𐅹੭੭   *\`𝗈ɯ𝗇ᧉꭇ\`* 🌷 ᦡᦡ
+ര ׄ 🌷 ׅ ${usedPrefix}ʀᴇɪɴɪᴄɪᴀʀ
+ര ׄ 🌷 ׅ ${usedPrefix}ᴅsᴏᴡɴᴇʀ
+ര ׄ 🌷 ׅ ${usedPrefix}sᴇᴛɴᴀᴍᴇ
+ര ׄ 🌷 ׅ ${usedPrefix}sᴇᴛᴘᴘ <img>
+ര ׄ 🌷 ׅ ${usedPrefix}ʀᴇsᴛᴀʀᴛ
+ര ׄ 🌷 ׅ ${usedPrefix}ᴜᴘᴅᴀᴛᴇ
+
+
+𓂂𓏸  𐅹੭੭   *\`𝖲ƚ𝗂𝖼𝗄ᧉꭇ\`* 🫓 ᦡᦡ
+
+ര ׄ 🫓 ׅ ${usedPrefix}sᴛɪᴄᴋᴇʀ <img>
+ര ׄ 🫓 ׅ ${usedPrefix}ʙʀᴀᴛ *<texto>*
+
+
+𓂂𓏸  𐅹੭੭   *\`𝖳ᨣᨣ𝗅𝗌\`* 🍵 ᦡᦡ
+
+ര ׄ 🍵 ׅ ${usedPrefix}sᴛɪᴄᴋᴇʀsᴇᴀʀᴄʜ <text>
+ര ׄ 🍵 ׅ ${usedPrefix}ʀᴠᴏᴄᴀʟ <audio>
+ര ׄ 🍵 ׅ ${usedPrefix}ᴛᴏᴜʀʟ2
+ര ׄ 🍵 ׅ ${usedPrefix}ʜᴅ
+ര ׄ 🍵 ׅ ${usedPrefix}ᴛᴏᴜʀʟ <imagen>
 `.trim()
 
-    // Unir header + body
     const menu = `${header}\n${body}`
-
-    // Configurar datos para el mensaje
+    
     const botname = '🌸◌*̥₊ Rᴏxʏ-Mᴅ ◌❐🎋༉'
     const textbot = '💖 𝙍𝙊𝙓𝙔 𝘽𝙔 𝘿𝙀𝙑 𝘽𝙍𝘼𝙔𝘼𝙉 ✨️'
     const banner = perfil
-    const redes = 'https://whatsapp.com/channel/0029VajUPbECxoB0cYovo60W'
+    const redes = 'https://whatsapp.com/channel/0029Vb6BDQc0lwgsDN1GJ31i'
     
     await conn.sendMessage(m.chat, {
       video: { url: videoUrl },
       caption: body,
       gifPlayback: true,
-      mentions: [m.sender],  // Agregamos el array de menciones
+      mentions: [m.sender],  
       ...metaMsg
     })
 
@@ -235,7 +233,7 @@ ${saludo}, *${taguser}*!
     console.error(e)
     await conn.sendMessage(m.chat, { 
       text: `✘ Error al enviar el menú: ${e.message}`,
-      mentions: [m.sender]  // También incluimos menciones en el mensaje de error
+      mentions: [m.sender] 
     }, { 
       quoted: metaMsg 
     })
@@ -246,6 +244,8 @@ handler.help = ['menu']
 handler.tags = ['main']
 handler.command = ['menu','help','menú','allmenu','menucompleto']
 handler.register = true
+//handler.limit = false;
+
 export default handler
 
 function clockString(ms) {
