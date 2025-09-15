@@ -77,7 +77,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 
 *\`· ›  Nombre del Bot\`* :: RoxyBot-MD 
 *\`· ›  Nombre de Usuario\`* :: ${taguser}
-*\`· ›  Estado: Gratis\`* :: Gratis
+*\`· ›  Estado\`* :: Gratis
 *\`· ›  Tiempo en línea\`*  :: ${uptime}
 ────────────────
 
